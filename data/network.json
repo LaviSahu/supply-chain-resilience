@@ -1,0 +1,547 @@
+{
+  "company": "Meridian Goods",
+  "canvas": {
+    "width": 1200,
+    "height": 400
+  },
+  "skus": [
+    {
+      "id": "SKU-A",
+      "name": "SmartHome Hub",
+      "revenue_per_unit": 60.0
+    },
+    {
+      "id": "SKU-B",
+      "name": "Wireless Charger",
+      "revenue_per_unit": 25.0
+    },
+    {
+      "id": "SKU-C",
+      "name": "Everyday Tote Bag",
+      "revenue_per_unit": 18.0
+    },
+    {
+      "id": "SKU-D",
+      "name": "Insulated Travel Mug",
+      "revenue_per_unit": 22.0
+    },
+    {
+      "id": "SKU-E",
+      "name": "Precision Multi-Tool",
+      "revenue_per_unit": 40.0
+    }
+  ],
+  "nodes": [
+    {
+      "id": "SUP-CN-CHIP",
+      "name": "Shenzhen Component Works",
+      "type": "supplier",
+      "tier": 1,
+      "region": "Asia",
+      "country": "China",
+      "category": "electronics-components",
+      "x": 90,
+      "y": 55,
+      "aliases": [
+        "Shenzhen Component Works",
+        "Shenzhen"
+      ]
+    },
+    {
+      "id": "SUP-VN-FAB",
+      "name": "Hanoi Textile Partners",
+      "type": "supplier",
+      "tier": 1,
+      "region": "Asia",
+      "country": "Vietnam",
+      "category": "textiles",
+      "x": 90,
+      "y": 150,
+      "aliases": [
+        "Hanoi Textile Partners",
+        "Hanoi"
+      ]
+    },
+    {
+      "id": "SUP-DE-PREC",
+      "name": "Rhineland Precision GmbH",
+      "type": "supplier",
+      "tier": 2,
+      "region": "Europe",
+      "country": "Germany",
+      "category": "precision-hardware",
+      "x": 90,
+      "y": 340,
+      "aliases": [
+        "Rhineland Precision GmbH",
+        "Rhineland Precision",
+        "Rhineland"
+      ]
+    },
+    {
+      "id": "SUP-IN-PACK",
+      "name": "Bengaluru Packaging Solutions",
+      "type": "supplier",
+      "tier": 2,
+      "region": "Asia",
+      "country": "India",
+      "category": "packaging",
+      "x": 90,
+      "y": 245,
+      "aliases": [
+        "Bengaluru Packaging Solutions",
+        "Bengaluru",
+        "Bangalore"
+      ]
+    },
+    {
+      "id": "PLANT-CN",
+      "name": "Shenzhen Assembly Plant",
+      "type": "plant",
+      "region": "Asia",
+      "country": "China",
+      "x": 430,
+      "y": 120,
+      "aliases": [
+        "Shenzhen Assembly Plant"
+      ],
+      "inventory_days_of_cover": {
+        "SKU-A": 5,
+        "SKU-B": 5,
+        "SKU-C": 5
+      }
+    },
+    {
+      "id": "PLANT-PL",
+      "name": "Wroclaw Assembly Plant",
+      "type": "plant",
+      "region": "Europe",
+      "country": "Poland",
+      "x": 430,
+      "y": 280,
+      "aliases": [
+        "Wroclaw Assembly Plant",
+        "Wroclaw"
+      ],
+      "inventory_days_of_cover": {
+        "SKU-C": 5,
+        "SKU-D": 5,
+        "SKU-E": 4
+      }
+    },
+    {
+      "id": "DC-SG",
+      "name": "Singapore Regional DC",
+      "type": "dc",
+      "region": "Asia",
+      "country": "Singapore",
+      "x": 770,
+      "y": 80,
+      "aliases": [
+        "Singapore Regional DC",
+        "Port of Singapore",
+        "Singapore"
+      ],
+      "port_dependency": "Port of Singapore",
+      "inventory_days_of_cover": {
+        "SKU-A": 14,
+        "SKU-B": 12,
+        "SKU-C": 10,
+        "SKU-D": 9,
+        "SKU-E": 7
+      }
+    },
+    {
+      "id": "DC-NL",
+      "name": "Rotterdam DC",
+      "type": "dc",
+      "region": "Europe",
+      "country": "Netherlands",
+      "x": 770,
+      "y": 200,
+      "aliases": [
+        "Rotterdam DC",
+        "Port of Rotterdam",
+        "Rotterdam"
+      ],
+      "port_dependency": "Port of Rotterdam",
+      "inventory_days_of_cover": {
+        "SKU-A": 12,
+        "SKU-B": 14,
+        "SKU-C": 12,
+        "SKU-D": 10,
+        "SKU-E": 8
+      }
+    },
+    {
+      "id": "DC-US",
+      "name": "Memphis DC",
+      "type": "dc",
+      "region": "North America",
+      "country": "United States",
+      "x": 770,
+      "y": 320,
+      "aliases": [
+        "Memphis DC",
+        "Memphis"
+      ],
+      "inventory_days_of_cover": {
+        "SKU-A": 16,
+        "SKU-B": 15,
+        "SKU-C": 14,
+        "SKU-D": 12,
+        "SKU-E": 10
+      }
+    },
+    {
+      "id": "MKT-APAC",
+      "name": "APAC Retail",
+      "type": "market",
+      "region": "Asia",
+      "country": "Multi-country",
+      "x": 1110,
+      "y": 60,
+      "aliases": [
+        "APAC Retail"
+      ],
+      "weekly_demand": {
+        "SKU-A": 1800,
+        "SKU-B": 2600,
+        "SKU-C": 3000,
+        "SKU-D": 1200,
+        "SKU-E": 900
+      }
+    },
+    {
+      "id": "MKT-EU",
+      "name": "EU Retail",
+      "type": "market",
+      "region": "Europe",
+      "country": "Multi-country",
+      "x": 1110,
+      "y": 155,
+      "aliases": [
+        "EU Retail"
+      ],
+      "weekly_demand": {
+        "SKU-A": 2200,
+        "SKU-B": 3000,
+        "SKU-C": 3400,
+        "SKU-D": 1600,
+        "SKU-E": 1300
+      }
+    },
+    {
+      "id": "MKT-US-E",
+      "name": "US East Retail",
+      "type": "market",
+      "region": "North America",
+      "country": "United States",
+      "x": 1110,
+      "y": 250,
+      "aliases": [
+        "US East Retail"
+      ],
+      "weekly_demand": {
+        "SKU-A": 3000,
+        "SKU-B": 4200,
+        "SKU-C": 4000,
+        "SKU-D": 2200,
+        "SKU-E": 1800
+      }
+    },
+    {
+      "id": "MKT-US-W",
+      "name": "US West Retail",
+      "type": "market",
+      "region": "North America",
+      "country": "United States",
+      "x": 1110,
+      "y": 345,
+      "aliases": [
+        "US West Retail"
+      ],
+      "weekly_demand": {
+        "SKU-A": 1600,
+        "SKU-B": 2200,
+        "SKU-C": 2600,
+        "SKU-D": 1100,
+        "SKU-E": 850
+      }
+    }
+  ],
+  "lanes": [
+    {
+      "id": "L1",
+      "source": "SUP-CN-CHIP",
+      "target": "PLANT-CN",
+      "mode": "ocean",
+      "lead_time_days": 12,
+      "capacity_units_per_week": 24000,
+      "skus": [
+        "SKU-A",
+        "SKU-B"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L2",
+      "source": "SUP-VN-FAB",
+      "target": "PLANT-CN",
+      "mode": "ocean",
+      "lead_time_days": 10,
+      "capacity_units_per_week": 4500,
+      "skus": [
+        "SKU-C"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L3",
+      "source": "SUP-VN-FAB",
+      "target": "PLANT-PL",
+      "mode": "multimodal",
+      "lead_time_days": 24,
+      "capacity_units_per_week": 19000,
+      "skus": [
+        "SKU-C",
+        "SKU-D"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L4",
+      "source": "SUP-DE-PREC",
+      "target": "PLANT-PL",
+      "mode": "road",
+      "lead_time_days": 4,
+      "capacity_units_per_week": 6000,
+      "skus": [
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L5",
+      "source": "SUP-IN-PACK",
+      "target": "PLANT-CN",
+      "mode": "ocean",
+      "lead_time_days": 14,
+      "capacity_units_per_week": 27000,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L6",
+      "source": "SUP-IN-PACK",
+      "target": "PLANT-PL",
+      "mode": "multimodal",
+      "lead_time_days": 20,
+      "capacity_units_per_week": 24000,
+      "skus": [
+        "SKU-C",
+        "SKU-D"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L7",
+      "source": "PLANT-CN",
+      "target": "DC-SG",
+      "mode": "ocean",
+      "lead_time_days": 6,
+      "capacity_units_per_week": 9000,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C"
+      ],
+      "primary": true,
+      "aliases": [
+        "Port of Singapore transshipment"
+      ]
+    },
+    {
+      "id": "L8",
+      "source": "PLANT-CN",
+      "target": "DC-NL",
+      "mode": "ocean",
+      "lead_time_days": 28,
+      "capacity_units_per_week": 6200,
+      "skus": [
+        "SKU-A",
+        "SKU-B"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L9",
+      "source": "PLANT-CN",
+      "target": "DC-US",
+      "mode": "ocean",
+      "lead_time_days": 22,
+      "capacity_units_per_week": 13000,
+      "skus": [
+        "SKU-A",
+        "SKU-B"
+      ],
+      "primary": true,
+      "aliases": [
+        "transpacific route",
+        "Asia-to-US ocean lane"
+      ]
+    },
+    {
+      "id": "L10",
+      "source": "PLANT-PL",
+      "target": "DC-NL",
+      "mode": "road",
+      "lead_time_days": 3,
+      "capacity_units_per_week": 7600,
+      "skus": [
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L11",
+      "source": "PLANT-PL",
+      "target": "DC-US",
+      "mode": "ocean",
+      "lead_time_days": 12,
+      "capacity_units_per_week": 15000,
+      "skus": [
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true,
+      "aliases": [
+        "Asia-Europe corridor"
+      ]
+    },
+    {
+      "id": "L12",
+      "source": "PLANT-PL",
+      "target": "DC-SG",
+      "mode": "ocean",
+      "lead_time_days": 26,
+      "capacity_units_per_week": 2600,
+      "skus": [
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L13",
+      "source": "DC-SG",
+      "target": "MKT-APAC",
+      "mode": "road",
+      "lead_time_days": 2,
+      "capacity_units_per_week": 10500,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L14",
+      "source": "DC-NL",
+      "target": "MKT-EU",
+      "mode": "road",
+      "lead_time_days": 2,
+      "capacity_units_per_week": 13500,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L15",
+      "source": "DC-US",
+      "target": "MKT-US-E",
+      "mode": "road",
+      "lead_time_days": 2,
+      "capacity_units_per_week": 5000,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "L16",
+      "source": "DC-US",
+      "target": "MKT-US-W",
+      "mode": "rail",
+      "lead_time_days": 4,
+      "capacity_units_per_week": 8500,
+      "skus": [
+        "SKU-A",
+        "SKU-B",
+        "SKU-C",
+        "SKU-D",
+        "SKU-E"
+      ],
+      "primary": true
+    },
+    {
+      "id": "LA1",
+      "source": "PLANT-PL",
+      "target": "DC-SG",
+      "mode": "ocean",
+      "lead_time_days": 26,
+      "capacity_units_per_week": 3000,
+      "skus": [
+        "SKU-C"
+      ],
+      "primary": false,
+      "switch_lag_weeks": 2
+    },
+    {
+      "id": "LA2",
+      "source": "PLANT-CN",
+      "target": "DC-NL",
+      "mode": "ocean",
+      "lead_time_days": 28,
+      "capacity_units_per_week": 2500,
+      "skus": [
+        "SKU-C"
+      ],
+      "primary": false,
+      "switch_lag_weeks": 2
+    },
+    {
+      "id": "LA3",
+      "source": "PLANT-CN",
+      "target": "DC-SG",
+      "mode": "air",
+      "lead_time_days": 5,
+      "capacity_units_per_week": 2500,
+      "skus": [
+        "SKU-A",
+        "SKU-B"
+      ],
+      "primary": false,
+      "switch_lag_weeks": 1
+    }
+  ]
+}

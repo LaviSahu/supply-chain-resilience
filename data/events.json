@@ -1,0 +1,317 @@
+[
+  {
+    "id": "EVT-001",
+    "date": "2026-05-18",
+    "headline": "Typhoon Bualoi tracks toward Shenzhen coast",
+    "body": "Regional forecasters have upgraded Typhoon Bualoi to a category 3 storm on a path expected to make landfall near Shenzhen within 72 hours. Shenzhen Component Works and the Shenzhen Assembly Plant have activated storm shutdown protocols, and inbound vessel traffic is being rerouted.",
+    "source": "Regional Weather Bureau",
+    "region": "Asia",
+    "confidence": 0.85
+  },
+  {
+    "id": "EVT-002",
+    "date": "2026-05-22",
+    "headline": "Port of Singapore reports vessel queue congestion",
+    "body": "Berth utilization at the Port of Singapore has climbed above 95% for the third consecutive week, with average vessel wait times now exceeding 60 hours. The Singapore Regional DC has flagged growing dwell times on inbound transshipment cargo.",
+    "source": "Maritime Traffic Monitor",
+    "region": "Asia",
+    "confidence": 0.80
+  },
+  {
+    "id": "EVT-003",
+    "date": "2026-05-29",
+    "headline": "Rhineland Precision GmbH files for creditor protection",
+    "body": "The German precision-hardware supplier Rhineland Precision GmbH filed for court-supervised creditor protection this week, citing rising energy costs and a shrinking order book. The filing raises near-term uncertainty over continued fastener shipments to downstream assembly customers.",
+    "source": "Handelsblatt Wire",
+    "region": "Europe",
+    "confidence": 0.90
+  },
+  {
+    "id": "EVT-004",
+    "date": "2026-06-03",
+    "headline": "Rotterdam dockworkers announce 48-hour strike",
+    "body": "The dockworkers' union at the Port of Rotterdam has called a 48-hour walkout over stalled wage negotiations, starting Monday. The Rotterdam DC expects both inbound and outbound trailer movements to be affected for the duration of the action.",
+    "source": "Reuters",
+    "region": "Europe",
+    "confidence": 0.88
+  },
+  {
+    "id": "EVT-005",
+    "date": "2026-06-08",
+    "headline": "Cyber intrusion detected at Hanoi Textile Partners ERP systems",
+    "body": "Hanoi Textile Partners confirmed a ransomware intrusion into its order-management and ERP systems late Tuesday. The supplier has taken systems offline while forensic teams investigate, halting electronic order confirmations to its assembly customers.",
+    "source": "Vietnam Cyber Response Center",
+    "region": "Asia",
+    "confidence": 0.75
+  },
+  {
+    "id": "EVT-006",
+    "date": "2026-06-12",
+    "headline": "EU tightens export controls on precision hardware components",
+    "body": "New EU licensing requirements for precision hardware exports take effect next month, adding administrative review time to cross-border shipments. Rhineland Precision GmbH, already under financial strain, has warned customers of potential additional delays in fastener deliveries.",
+    "source": "EU Official Journal",
+    "region": "Europe",
+    "confidence": 0.70
+  },
+  {
+    "id": "EVT-007",
+    "date": "2026-06-16",
+    "headline": "SmartHome Hub demand surges across US East Retail",
+    "body": "A viral product review has driven a sharp jump in SmartHome Hub orders through US East Retail over the past ten days. Internal sales analytics show order volume running roughly 40% above forecast, with the surge expected to persist for several weeks.",
+    "source": "Internal Sales Analytics",
+    "region": "North America",
+    "confidence": 0.82
+  },
+  {
+    "id": "EVT-008",
+    "date": "2026-06-20",
+    "headline": "Wireless Charger batch recalled from Shenzhen Assembly Plant",
+    "body": "Internal quality control has flagged a thermal defect in three Wireless Charger production batches from the Shenzhen Assembly Plant. Affected lots are being recalled from distribution pending a root-cause review of the component sourcing.",
+    "source": "Internal QA Report",
+    "region": "Asia",
+    "confidence": 0.78
+  },
+  {
+    "id": "EVT-009",
+    "date": "2026-06-25",
+    "headline": "Transpacific ocean freight rates spike 35%",
+    "body": "Spot rates on the transpacific route from Asia to US ports have jumped 35% over the past month amid a capacity crunch. Carriers cite blank sailings and equipment repositioning as the primary drivers of the surge on the Asia-to-US ocean lane.",
+    "source": "Freight Rate Index",
+    "region": "Asia",
+    "confidence": 0.70
+  },
+  {
+    "id": "EVT-010",
+    "date": "2026-07-01",
+    "headline": "Memphis DC faces warehouse labor shortage",
+    "body": "The Memphis DC is operating at roughly 80% of normal staffing after a wave of seasonal attrition, according to local reporting. Outbound shipment cycle times have lengthened as the facility works through a growing pick-and-pack backlog.",
+    "source": "Local Business Journal",
+    "region": "North America",
+    "confidence": 0.65
+  },
+  {
+    "id": "EVT-011",
+    "date": "2026-05-16",
+    "headline": "Suez Canal congestion easing after weeks of delay",
+    "body": "Transit queues at the Suez Canal have shortened significantly following the deployment of additional pilotage crews. Analysts expect knock-on schedule recovery for Asia-Europe services within two to three weeks.",
+    "source": "Global Shipping Wire",
+    "region": "Middle East",
+    "confidence": 0.40
+  },
+  {
+    "id": "EVT-012",
+    "date": "2026-05-19",
+    "headline": "US dockworkers union opens new contract talks",
+    "body": "Negotiations between the US longshoremen's union and port employers have formally opened ahead of the current contract's expiry next year. Both sides describe the early talks as routine and non-adversarial.",
+    "source": "Labor Relations Digest",
+    "region": "North America",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-013",
+    "date": "2026-05-20",
+    "headline": "Raw material costs volatile amid copper price swings",
+    "body": "Copper futures have swung more than 8% over the past two weeks on mixed demand signals from construction and electronics manufacturers. Analysts describe the moves as speculative positioning rather than a supply shortfall.",
+    "source": "Commodities Desk",
+    "region": "Global",
+    "confidence": 0.35
+  },
+  {
+    "id": "EVT-014",
+    "date": "2026-05-24",
+    "headline": "New tariffs announced on unrelated consumer electronics category",
+    "body": "A newly announced tariff schedule targets a narrow category of consumer audio equipment not produced by Meridian Goods or its suppliers. Trade counsel assess the direct exposure as minimal.",
+    "source": "Trade Policy Bulletin",
+    "region": "Global",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-015",
+    "date": "2026-05-27",
+    "headline": "Flooding reported in Chennai industrial belt",
+    "body": "Seasonal monsoon flooding has disrupted road access to several industrial parks around Chennai, India. No Meridian Goods supplier facilities are located in the affected corridor.",
+    "source": "South Asia News Desk",
+    "region": "Asia",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-016",
+    "date": "2026-05-31",
+    "headline": "Global chip shortage easing as fabs ramp output",
+    "body": "Semiconductor foundries across Asia report utilization climbing back toward pre-shortage levels, easing a two-year capacity crunch. Component lead times industry-wide are expected to normalize over the coming quarter.",
+    "source": "Semiconductor Industry Report",
+    "region": "Asia",
+    "confidence": 0.40
+  },
+  {
+    "id": "EVT-017",
+    "date": "2026-06-02",
+    "headline": "Ocean carrier adds new Asia-Europe express service",
+    "body": "A major container line has announced a new expedited Asia-Europe rotation cutting transit time by roughly four days. The service is scheduled to begin operations next quarter.",
+    "source": "Global Shipping Wire",
+    "region": "Asia",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-018",
+    "date": "2026-06-05",
+    "headline": "Labor unrest reported broadly across Vietnam textile sector",
+    "body": "Industry associations note scattered wage disputes across Vietnam's textile manufacturing sector this quarter, without naming specific facilities. No work stoppages have been confirmed at named supplier sites.",
+    "source": "Southeast Asia Labor Monitor",
+    "region": "Asia",
+    "confidence": 0.45
+  },
+  {
+    "id": "EVT-019",
+    "date": "2026-06-07",
+    "headline": "Cybersecurity researchers warn of new ransomware strain targeting logistics firms",
+    "body": "A security research group has published an advisory on a ransomware variant observed probing logistics and freight-forwarding networks globally. No specific victims have been named in the report.",
+    "source": "Threat Intelligence Bulletin",
+    "region": "Global",
+    "confidence": 0.35
+  },
+  {
+    "id": "EVT-020",
+    "date": "2026-06-10",
+    "headline": "El Nino weather pattern update issued by climate agency",
+    "body": "A seasonal climate outlook flags an elevated chance of above-average storm activity across the Pacific basin later this year. The bulletin is described as a general planning advisory rather than an active-storm warning.",
+    "source": "International Climate Agency",
+    "region": "Global",
+    "confidence": 0.25
+  },
+  {
+    "id": "EVT-021",
+    "date": "2026-06-13",
+    "headline": "Competitor launches rival smart-home product line",
+    "body": "A competing consumer electronics brand has launched a smart-home hub positioned against Meridian Goods' SmartHome Hub line. Early reviews are mixed, and no material demand shift has been observed yet.",
+    "source": "Consumer Tech News",
+    "region": "Global",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-022",
+    "date": "2026-06-15",
+    "headline": "US Federal Reserve signals rate pause",
+    "body": "The US central bank signaled it would hold interest rates steady at its next meeting, citing balanced inflation and employment data. Markets reacted with modest gains.",
+    "source": "Financial Wire",
+    "region": "North America",
+    "confidence": 0.20
+  },
+  {
+    "id": "EVT-023",
+    "date": "2026-06-17",
+    "headline": "New sustainability packaging regulation proposed in EU",
+    "body": "EU lawmakers have proposed draft rules requiring higher recycled content in consumer packaging by 2028. The proposal is in early committee stage and is not yet binding.",
+    "source": "EU Policy Tracker",
+    "region": "Europe",
+    "confidence": 0.35
+  },
+  {
+    "id": "EVT-024",
+    "date": "2026-06-19",
+    "headline": "Trade delegation visits Hanoi to discuss tariff framework",
+    "body": "A bilateral trade delegation met with Vietnamese officials this week to discuss a future tariff framework covering several manufacturing categories. Talks are described as preliminary with no agreement reached.",
+    "source": "Diplomatic Briefing",
+    "region": "Asia",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-025",
+    "date": "2026-06-21",
+    "headline": "Minor software glitch reported at unnamed regional carrier",
+    "body": "A regional freight carrier reported a brief booking-system outage lasting under two hours, since resolved. No shipments were confirmed lost or significantly delayed.",
+    "source": "Logistics Trade Press",
+    "region": "Global",
+    "confidence": 0.25
+  },
+  {
+    "id": "EVT-026",
+    "date": "2026-06-23",
+    "headline": "Analysts note rising container leasing rates",
+    "body": "Container leasing rates have ticked up modestly amid tighter equipment availability in several Asian ports. The move is described as seasonal rather than structural.",
+    "source": "Freight Rate Index",
+    "region": "Asia",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-027",
+    "date": "2026-06-26",
+    "headline": "Local elections held in Poland, no major policy shift expected",
+    "body": "Regional elections concluded over the weekend with incumbent coalitions largely retaining control. Analysts do not expect meaningful changes to industrial or trade policy.",
+    "source": "European Politics Desk",
+    "region": "Europe",
+    "confidence": 0.20
+  },
+  {
+    "id": "EVT-028",
+    "date": "2026-06-28",
+    "headline": "Heatwave forecast across Southern Europe",
+    "body": "Meteorologists forecast an extended heatwave across Southern Europe over the coming two weeks. Energy grid operators have issued routine advisories but no facility disruptions are anticipated.",
+    "source": "European Weather Service",
+    "region": "Europe",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-029",
+    "date": "2026-06-30",
+    "headline": "Global consumer confidence index ticks up slightly",
+    "body": "A widely tracked consumer confidence index rose fractionally this month, driven by improved sentiment in North America and Europe. Economists describe the move as within normal monthly variation.",
+    "source": "Economic Indicators Service",
+    "region": "Global",
+    "confidence": 0.25
+  },
+  {
+    "id": "EVT-030",
+    "date": "2026-07-02",
+    "headline": "New free trade agreement talks begin between two unrelated blocs",
+    "body": "Trade officials from two regional blocs unconnected to Meridian Goods' primary sourcing geographies opened preliminary free-trade talks. No manufacturing categories relevant to Meridian Goods are covered in the initial scope.",
+    "source": "Diplomatic Briefing",
+    "region": "Global",
+    "confidence": 0.25
+  },
+  {
+    "id": "EVT-031",
+    "date": "2026-07-04",
+    "headline": "Packaging industry conference highlights recycled materials trend",
+    "body": "Speakers at an industry packaging conference highlighted growing adoption of recycled substrates across consumer goods packaging. No specific supplier commitments were announced.",
+    "source": "Packaging Industry News",
+    "region": "Global",
+    "confidence": 0.20
+  },
+  {
+    "id": "EVT-032",
+    "date": "2026-07-06",
+    "headline": "Regional airline expands cargo capacity out of Bangalore",
+    "body": "A regional carrier announced additional weekly freighter frequencies out of Bangalore to support growing e-commerce cargo demand. The expansion is aimed broadly at the regional express market rather than any single shipper.",
+    "source": "Air Cargo Weekly",
+    "region": "Asia",
+    "confidence": 0.40
+  },
+  {
+    "id": "EVT-033",
+    "date": "2026-07-08",
+    "headline": "Minor port equipment malfunction reported and resolved same day at unnamed facility",
+    "body": "A container-handling crane malfunction at an unnamed regional port was resolved within hours with no reported cargo backlog. Port authorities described the incident as routine.",
+    "source": "Maritime Traffic Monitor",
+    "region": "Global",
+    "confidence": 0.20
+  },
+  {
+    "id": "EVT-034",
+    "date": "2026-07-09",
+    "headline": "Currency fluctuation narrows margins for Asia-sourced goods",
+    "body": "A modest strengthening of several Asian currencies against the US dollar has compressed landed-cost margins for importers this quarter. Finance teams describe the impact as manageable within existing hedging programs.",
+    "source": "Commodities Desk",
+    "region": "Asia",
+    "confidence": 0.30
+  },
+  {
+    "id": "EVT-035",
+    "date": "2026-07-11",
+    "headline": "Industry survey finds most shippers plan to diversify supplier base",
+    "body": "A cross-industry survey finds a majority of consumer goods shippers plan to add secondary suppliers over the next two years, citing resilience concerns generally. The survey does not identify any Meridian Goods supplier by name.",
+    "source": "Supply Chain Industry Survey",
+    "region": "Global",
+    "confidence": 0.25
+  }
+]

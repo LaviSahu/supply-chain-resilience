@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resilience Radar — Executive Brief</title>
+<style>
+  :root {
+    --page:#0d0d0d; --surface:#1a1a19; --surface-2:#222220;
+    --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#199e70; --s5:#9085e9; --s8:#d95926;
+    --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f0efec;
+      --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+      --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+      --s1:#2a78d6; --s2:#1baf7a; --s5:#4a3aa7; --s8:#eb6834;
+    }
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body {
+    background:var(--page); color:var(--ink-2);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:14px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:900px; margin:0 auto; padding:32px 28px 40px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  header.top { display:flex; align-items:center; gap:14px; padding-bottom:18px; margin-bottom:22px; border-bottom:1px solid var(--ring); }
+  .brand h1 { margin:0; font-size:20px; font-weight:700; color:var(--ink); letter-spacing:-.01em; }
+  .brand .sub { margin:3px 0 0; font-size:12px; color:var(--muted); }
+  .top .spacer { flex:1; }
+  .stamp { font-size:11px; color:var(--muted); text-align:right; }
+  .stamp b { color:var(--ink-2); font-weight:600; }
+  .demo-badge { font-size:9px; font-weight:700; letter-spacing:.1em; color:var(--muted); border:1px solid var(--ring); border-radius:20px; padding:2px 8px; }
+
+  h2.kicker-h { font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 4px; }
+  h2.section-h { margin:0 0 14px; font-size:17px; font-weight:600; color:var(--ink); }
+
+  .kpis { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-bottom:26px; }
+  .tile { background:var(--surface); border:1px solid var(--ring); border-radius:10px; padding:14px 16px; }
+  .tile .label { font-size:10.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .tile .value { font-size:24px; font-weight:700; color:var(--ink); margin:6px 0 3px; line-height:1.05; }
+  .tile .value .unit { font-size:13px; font-weight:600; color:var(--ink-2); margin-left:2px; }
+  .tile .ctx { font-size:11px; color:var(--muted); }
+
+  .card { background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:22px; margin-bottom:22px; }
+
+  .stat-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin:16px 0 18px; }
+  .stat { background:var(--surface-2); border-radius:9px; padding:12px 14px; }
+  .stat .k { font-size:10.5px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .stat .v { font-size:21px; font-weight:700; color:var(--ink); margin-top:5px; }
+  .stat .v small { font-size:12px; font-weight:600; color:var(--ink-2); }
+  .stat.bad .v { color:var(--critical); }
+
+  p.lede { color:var(--ink-2); margin:0 0 4px; }
+  p.lede b { color:var(--ink); }
+
+  table.mit { width:100%; border-collapse:collapse; font-size:13px; margin-top:6px; }
+  table.mit th { text-align:left; font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); padding:0 10px 8px; border-bottom:1px solid var(--ring); }
+  table.mit th.n, table.mit td.n { text-align:right; }
+  table.mit td { padding:9px 10px; border-bottom:1px solid var(--grid); color:var(--ink-2); vertical-align:top; }
+  table.mit td.action { color:var(--ink); font-weight:600; }
+  table.mit td.mech { color:var(--muted); font-size:12px; max-width:340px; }
+  .rec { display:inline-flex; align-items:center; gap:5px; font-size:9.5px; font-weight:700; letter-spacing:.04em; color:var(--good); background:color-mix(in srgb, var(--good) 14%, var(--surface)); padding:2px 7px; border-radius:20px; margin-left:8px; }
+  .rec .dot { width:6px; height:6px; border-radius:50%; background:var(--good); }
+
+  ul.notes { margin:6px 0 0; padding-left:20px; color:var(--ink-2); }
+  ul.notes li { margin-bottom:6px; }
+
+  footer.foot { border-top:1px solid var(--ring); padding-top:14px; margin-top:6px; font-size:11.5px; color:var(--muted); }
+  footer.foot b { color:var(--ink-2); font-weight:600; }
+  footer.foot .cite { margin-top:6px; }
+
+  @media print {
+    :root {
+      --page:#ffffff; --surface:#ffffff; --surface-2:#f2f2f0;
+      --ink:#0a0a0a; --ink-2:#2a2a28; --muted:#5a5a56;
+      --grid:#dddad2; --axis:#bcb9b1; --ring:#cfccc4;
+      --s1:#1f5aa8; --s2:#127a52; --s5:#4a3aa7; --s8:#b3450f;
+      --good:#0a7d0a; --warn:#8a5a00; --serious:#a8471f; --critical:#a02222;
+    }
+    * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body { font-size:12px; }
+    .wrap { max-width:100%; padding:0; }
+    .card, .tile, .stat { border:1px solid var(--ring); box-shadow:none; break-inside:avoid; }
+    header.top { break-after:avoid; }
+    @page { margin:16mm 14mm; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+      <circle cx="17" cy="17" r="15" stroke="var(--s1)" stroke-width="1.4" opacity=".45"/>
+      <circle cx="17" cy="17" r="10" stroke="var(--s1)" stroke-width="1.4" opacity=".7"/>
+      <circle cx="17" cy="17" r="5" stroke="var(--s1)" stroke-width="1.4"/>
+      <circle cx="17" cy="17" r="2" fill="var(--s1)"/>
+    </svg>
+    <div class="brand">
+      <h1>Resilience Radar — Executive Brief <span class="demo-badge">DEMO DATA</span></h1>
+      <p class="sub">Supply Chain Resilience Control Tower · Meridian Goods (demo network)</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="stamp">Generated<br><b>14 Jul 2026, 14:08 UTC</b></div>
+  </header>
+
+  <h2 class="kicker-h">Headline KPIs</h2>
+  <section class="kpis">
+    <div class="tile"><div class="label">Service Level (baseline)</div><div class="value num">100.0<span class="unit">%</span></div><div class="ctx">worst case: Port of Singapore Closure</div></div>
+    <div class="tile"><div class="label">Revenue at Risk</div><div class="value num">$21.0M</div><div class="ctx">gross exposure pre-buffer · 35 open risks</div></div>
+    <div class="tile"><div class="label">Risk Severity Index</div><div class="value num">5.69</div><div class="ctx">mean risk_score across open register</div></div>
+    <div class="tile"><div class="label">Open Risks</div><div class="value num">35</div><div class="ctx">CRITICAL:3, HIGH:6, MEDIUM:2, LOW:24</div></div>
+    <div class="tile"><div class="label">Min TTS</div><div class="value num">0<span class="unit">wk</span></div><div class="ctx">weakest survival window across scenarios</div></div>
+    <div class="tile"><div class="label">Single-Source Nodes</div><div class="value num">1</div><div class="ctx">most concentrated category: electronics-components</div></div>
+  </section>
+
+  <section class="card">
+    <h2 class="kicker-h">Worst-Case Scenario · Crown Jewel Risk</h2>
+    <h2 class="section-h">Port of Singapore Closure</h2>
+    <p class="lede">Of the three modeled disruption scenarios, this is the worst by
+      service-level floor — despite <b>not</b> being the longest outage. Outage
+      window: <b>weeks 1–2</b>.</p>
+    <div class="stat-row">
+      <div class="stat bad"><div class="k">Worst Service Level</div><div class="v">79.0<small>%</small></div></div>
+      <div class="stat bad"><div class="k">Time to Survive</div><div class="v">0<small>wk</small></div></div>
+      <div class="stat"><div class="k">Time to Recover</div><div class="v">2<small>wk</small></div></div>
+      <div class="stat bad"><div class="k">Total Lost Revenue</div><div class="v">$579K</div></div>
+    </div>
+    <p class="lede">Time to Survive of 0 week(s) means the network has no buffer at all — service degrades below the 98% threshold in the very first week.</p>
+  </section>
+
+  <section class="card">
+    <h2 class="kicker-h">Top-Ranked Mitigation</h2>
+    <h2 class="section-h">Recommended response to Port of Singapore Closure</h2>
+    <table class="mit">
+      <thead><tr><th>Action</th><th>Mechanism</th><th class="n">Cost</th><th class="n">Avoided Loss</th><th class="n">Net Benefit</th></tr></thead>
+      <tbody>
+        <tr><td class="action">Prioritized Allocation<span class="rec"><span class="dot"></span>RECOMMENDED</span></td><td class="mech">Smarter demand/supply matching during shortage squeezes modest extra effective throughput out of constrained capacity, at near-zero capital cost.</td><td class="n">$8.0k</td><td class="n">$496.4k</td><td class="n" style="color:var(--ink);font-weight:600">$488.4k</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2 class="kicker-h">Read Alongside</h2>
+    <ul class="notes">
+      <li>Full plain-English narrative: <b>docs/00-executive-walkthrough.md</b></li>
+      <li>Interactive control tower with all 3 scenarios, sortable risk register, network map: <b>output/dashboard.html</b> (run <code>make demo</code> to regenerate)</li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <span>Deterministic time-phased simulation over a modeled network; risk scoring = likelihood × impact; TTR/TTS per Simchi-Levi resilience metrics.</span>
+    <div class="cite">Simchi-Levi, D., Schmidt, W., &amp; Wei, Y. (2015). "Identifying Risks and Mitigating Disruptions in the Automotive Supply Chain." <i>Interfaces</i>, 45(5), 375&ndash;390. DOI: 10.1287/inte.2015.0804.</div>
+    <div style="margin-top:8px"><b>Built with Resilience Radar</b> · generated by <code>docs/make_exec_brief.py</code> from a live <code>make demo</code> run · all figures computed, none hardcoded.</div>
+  </footer>
+</div>
+</body>
+</html>
