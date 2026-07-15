@@ -1,27 +1,31 @@
 # Resilience Radar
 
-**A supply-chain control tower: disruption feed → risk register → time-phased what-if simulation → ranked mitigations → single-file HTML dashboard. Pure Python stdlib, zero dependencies, zero API keys.**
+**A supply-chain control tower, built and tested end to end: disruption feed → risk register → time-phased what-if simulation → ranked mitigations → self-contained HTML dashboard. Pure Python stdlib, zero dependencies, zero API keys.**
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![Dependencies](https://img.shields.io/badge/dependencies-stdlib--only-brightgreen)](#60-second-quickstart)
-[![Tests](https://img.shields.io/badge/tests-67%20passing-success)](tests/)
+[![Tests](https://img.shields.io/badge/tests-74%20passing-success)](tests/)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 ## Why
 
-Every supply chain runs on a working assumption that nothing important
-will break at the same time as anything else. That assumption fails
-predictably — a single-source supplier, a port with no bypass, a demand
-spike that outruns distribution capacity — and it usually fails in ways
-that were computable in advance, not genuinely unforeseeable. Resilience
-Radar is a small demonstration of that idea: given a modeled network and a
-disruption feed, you can compute *which* nodes are structurally fragile,
-*how long* the business survives before service degrades, and *how fast*
-it recovers — all before the disruption happens, using nothing more exotic
-than arithmetic over a graph and a 12-week weekly simulation loop. This
-mirrors the resilience-metrics work of Sheffi, Simchi-Levi, and Ivanov
-(TTR/TTS, ripple-effect propagation) and applies it to a synthetic but
-structurally realistic three-tier consumer-goods network.
+I built this to demonstrate the full analytical stack a supply-chain risk
+function actually needs — not a slide, a working system. Feed it disruption
+events and it classifies and scores 35 open risks against a modeled
+three-tier FMCG network (Meridian Goods: ~$21M revenue at risk, one
+single-source node). Run a scenario and it simulates 12 weeks of time-phased
+propagation to compute TTR/TTS — in the resilience-metrics tradition of
+Sheffi, Simchi-Levi, and Ivanov (ripple-effect propagation) — then ranks
+five mitigation levers by re-simulated net benefit.
+
+The worst preset scenario, a Port of Singapore closure, drops service level
+to 79% with zero survival buffer and $578,800 in lost revenue; the top
+mitigation (Prioritized Allocation, $8k cost) returns $488.4k net. Every
+number is computed at run time, not hardcoded, and backed by 74 passing
+tests — pure Python stdlib, zero dependencies, clone-and-run in 60 seconds.
+
+Data is synthetic; the build combined hands-on domain modeling with
+AI-assisted engineering.
 
 ## Architecture
 
